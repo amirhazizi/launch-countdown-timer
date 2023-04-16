@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* global css */
+body {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 14px;
+}
+
+/* custom properties */
+:root {
+    /* ## Colors */
+    /*  ### Primary */
+    --cl-GrayishBlue: hsl(237, 18%, 59%);
+    --cl-SoftRed: hsl(345, 95%, 68%);
+    /*  ### Neutral */
+    --cl-White: hsl(0, 0%, 100%);
+    --cl-DarkDesaturatedBlue: hsl(236, 21%, 26%);
+    --cl-VerydarkBlue: hsl(235, 16%, 14%);
+    --cl-VerydarkBlue-2: hsl(234, 17%, 12%);
+}
