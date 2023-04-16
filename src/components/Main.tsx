@@ -6,8 +6,8 @@ const Main = () => {
   const [hours, setHours] = useState(0)
   const [minutes, setMinutes] = useState(0)
   const [seconds, setSeconds] = useState(0)
-  const secondFront = useRef<HTMLInputElement>(null)
-  const secondBack = useRef<HTMLInputElement>(null)
+  //   const secondFront = useRef<HTMLInputElement>(null)
+  //   const secondBack = useRef<HTMLInputElement>(null)
   useEffect(() => {
     const repeater = setInterval(() => {
       const currentTime = parseInt(new Date().getTime().toString())
@@ -101,14 +101,14 @@ const Main = () => {
           </div>
           <div className='space-y-5 relative'>
             <div className='card-container '>
-              <div ref={secondFront} className='card-front  card-display'>
+              <div className='card-front'>
                 <div className='card bg-gray-800 rounded-md'></div>
                 <div className='card card-bottom bg-gray-700 rounded-md border-b-8 rounded-b-xl border-b-clVerydarkBlue_2 '></div>
                 <h1 className='absolute top-1/2 left-1/2 text-clSoftRed -translate-x-1/2 -translate-y-1/2 text-4xl opacity-90 md:text-7xl'>
                   {seconds > 9 ? seconds : `0${seconds}`}
                 </h1>
               </div>
-              <div ref={secondBack} className='card-back '>
+              <div className='card-back'>
                 <div className='card bg-gray-800 rounded-md'></div>
                 <div className='card card-bottom bg-gray-700 rounded-md border-b-8 rounded-b-xl border-b-clVerydarkBlue_2 '></div>
                 <h1 className='absolute top-1/2 left-1/2 text-clSoftRed -translate-x-1/2 -translate-y-1/2 text-4xl opacity-90 md:text-7xl'>
