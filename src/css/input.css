@@ -46,22 +46,24 @@ main>div {
     margin: 0 auto;
     perspective: 1000px;
     position: relative;
+    overflow: hidden;
 }
 
-.card-front {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transform: rotateX(0);
-    transition: all 300ms ease-in-out;
-}
 
+
+.card-front,
 .card-back {
     position: absolute;
     width: 100%;
     height: 100%;
+    opacity: 1;
+    transform: rotateX(0);
+    transition: transform 300ms, opacity 50ms;
+}
+
+
+.card-back {
     opacity: 0;
-    transition: all 300ms ease-in-out;
     transform: rotateX(180deg);
 }
 
@@ -69,6 +71,10 @@ main>div {
     width: 100%;
     height: 50%;
     margin: 0 auto;
+}
+
+.card-display {
+    opacity: 1;
 }
 
 .card-text {
@@ -79,14 +85,15 @@ main>div {
 }
 
 .card-container:hover .card-front {
-    transform: rotateX(180deg);
     opacity: 0;
+    transform: rotateX(180deg);
+
 
 }
 
 .card-container:hover .card-back {
-    transform: rotateX(0deg);
     opacity: 1;
+    transform: rotateX(0deg);
 }
 
 footer {
