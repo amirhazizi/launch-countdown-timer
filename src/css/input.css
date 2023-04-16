@@ -28,12 +28,12 @@ body {
 }
 
 main {
-    height: calc(100vh - 12rem);
+    height: calc(100vh - 13rem);
     background: url('../assets/bg-stars.svg') center/cover no-repeat;
 }
 
 main>div {
-    width: min(85vw, 900px)
+    width: min(85vw, 550px)
 }
 
 .header {
@@ -42,8 +42,27 @@ main>div {
 }
 
 .card-container {
-    /* width: 5rem; */
     height: 4.5rem;
+    margin: 0 auto;
+    perspective: 1000px;
+    position: relative;
+}
+
+.card-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotateX(0);
+    transition: all 300ms ease-in-out;
+}
+
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 300ms ease-in-out;
+    transform: rotateX(180deg);
 }
 
 .card {
@@ -59,8 +78,41 @@ main>div {
     margin-left: .2rem;
 }
 
+.card-container:hover .card-front {
+    transform: rotateX(180deg);
+    opacity: 0;
+
+}
+
+.card-container:hover .card-back {
+    transform: rotateX(0deg);
+    opacity: 1;
+}
+
 footer {
-    height: 12rem;
+    height: 13rem;
     background: url('../assets/pattern-hills.svg') bottom right -4rem/270% no-repeat;
     ;
+}
+
+@media (min-width:768px) {
+    .card-container {
+        max-width: 7.5rem;
+        height: 7rem;
+    }
+
+    .card-text {
+        font-size: .6rem;
+    }
+
+    footer {
+        background-size: 150%;
+    }
+}
+
+@media (min-width:1024px) {
+    footer {
+        background-position: bottom;
+        background-size: 100%;
+    }
 }
