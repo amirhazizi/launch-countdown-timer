@@ -794,7 +794,7 @@ main {
 }
 
 main>div {
-  width: min(85vw, 600px)
+  width: min(85vw, 650px)
 }
 
 .header {
@@ -869,12 +869,12 @@ footer {
 
 @media (min-width:768px) {
   .card-container {
-    max-width: 8.5rem;
-    height: 8rem;
+    max-width: 9.5rem;
+    height: 9rem;
   }
 
   .card-text {
-    font-size: .6rem;
+    font-size: .8rem;
   }
 
   footer {
