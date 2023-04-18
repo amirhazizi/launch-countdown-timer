@@ -33,7 +33,7 @@ main {
 }
 
 main>div {
-    width: min(85vw, 550px)
+    width: min(85vw, 600px)
 }
 
 .header {
@@ -56,15 +56,8 @@ main>div {
     position: absolute;
     width: 100%;
     height: 100%;
-    opacity: 1;
-    transform: rotateX(0);
-    transition: transform 300ms, opacity 50ms;
-}
-
-
-.card-back {
     opacity: 0;
-    transform: rotateX(180deg);
+    transition: transform 650ms, opacity 50ms;
 }
 
 .card {
@@ -73,8 +66,24 @@ main>div {
     margin: 0 auto;
 }
 
-.card-display {
+.days-card-display {
     opacity: 1;
+    transform: var(--days-transform);
+}
+
+.hours-card-display {
+    opacity: 1;
+    transform: var(--hours-transform);
+}
+
+.minutes-card-display {
+    opacity: 1;
+    transform: var(--minutes-transform);
+}
+
+.seconds-card-display {
+    opacity: 1;
+    transform: var(--seconds-transform);
 }
 
 .card-text {
@@ -104,8 +113,8 @@ footer {
 
 @media (min-width:768px) {
     .card-container {
-        max-width: 7.5rem;
-        height: 7rem;
+        max-width: 8.5rem;
+        height: 8rem;
     }
 
     .card-text {
