@@ -33,7 +33,7 @@ main {
 }
 
 main>div {
-    width: min(85vw, 650px)
+    width: min(85vw, 675px)
 }
 
 .header {
@@ -93,18 +93,6 @@ main>div {
     margin-left: .2rem;
 }
 
-.card-container:hover .card-front {
-    opacity: 0;
-    transform: rotateX(180deg);
-
-
-}
-
-.card-container:hover .card-back {
-    opacity: 1;
-    transform: rotateX(0deg);
-}
-
 footer {
     height: 13rem;
     background: url('../assets/pattern-hills.svg') bottom right -4rem/270% no-repeat;
@@ -113,8 +101,8 @@ footer {
 
 @media (min-width:768px) {
     .card-container {
-        max-width: 9.5rem;
-        height: 9rem;
+        max-width: 10rem;
+        height: 9.5rem;
     }
 
     .card-text {
